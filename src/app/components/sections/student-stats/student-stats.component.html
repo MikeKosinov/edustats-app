@@ -1,0 +1,42 @@
+<div class="container">
+  <h3>Фільтри</h3>
+    <form class="inline_filter_form" fxLayout="row" fxLayoutAlign="end">
+<mat-form-field appearance="outline" >
+  <mat-label>Пошук за прізвищем</mat-label>
+  <input matInput
+         type="text"
+         id="search"
+         placeholder="Введіть прізвище"
+         #filter>
+  <button matSuffix mat-button  class ='formFilter_button noHover'  (click)="filterResults(filter.value)">
+    <mat-icon>search</mat-icon>
+  </button>
+<!--  filter by group number-->
+</mat-form-field >
+      <mat-form-field appearance="outline">
+        <mat-label>Номер навч. групи</mat-label>
+        <mat-select  (selectionChange)="onSelectGroupResult($event.value)">
+          <mat-option *ngFor="let group of groups" [value]="group">{{group}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+<!--      filter for type of control-->
+
+        <button mat-stroked-button class="clear_filters" color="primary" (click)="clearFilters()">Очистити фільтри</button>
+
+    </form>
+<h2>Студенти</h2>
+  <div class="students">
+    <app-student
+      *ngFor="let student of visibleStudents"
+      [student]="student"
+    ></app-student>
+  </div>
+  <p>Студентів на сторінці: {{ visibleStudents.length }}</p>
+  <!-- material pagginagor component -->
+  <mat-paginator
+    [length]="students.length"
+    [pageSize]="itemsPerPage"
+    [pageSizeOptions]="itemsPerPageOptions"
+    (page)="onPageChange($event)"
+  ></mat-paginator>
+</div>

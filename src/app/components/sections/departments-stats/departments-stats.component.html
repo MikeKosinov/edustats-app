@@ -1,0 +1,72 @@
+<div class="section-container">
+  <h2>{{ title }}</h2>
+  <div class="statistic-criterias">
+    <div class="card-row">
+      <mat-card class="card" *ngFor="let criteria of statisticsCriteria">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title
+              ><h4>{{ criteria.name }}</h4></mat-card-title
+            >
+          </mat-card-title-group>
+          <mat-card-content>{{ criteria.value }}</mat-card-content>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="card-row">
+    <mat-card class="card">
+      <mat-card-header class="card-header">
+        <mat-card-title
+          ><h4>Розподіл балів студентів відповідно ECTS</h4></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <app-dognut-chart></app-dognut-chart>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+    </mat-card>
+    <mat-card class="card">
+      <mat-card-header class="card-header">
+        <mat-card-title>
+          <h4>
+            Динаміка успішності навчальних груп за семестрами
+          </h4></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <app-line-chart
+          [averageScores]="averageMarkBySemester"
+        ></app-line-chart>
+      </mat-card-content>
+    </mat-card>
+    <!--     third card-->
+    <mat-card class="card">
+      <mat-card-header class="card-header">
+        <mat-card-title>
+          <h4>Рейтинг навчальних груп за підсумками сесії</h4></mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <app-bar-chart></app-bar-chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <!--      separate row for line chart-->
+  <div class="card-row">
+    <mat-card class="card line-chart">
+      <mat-card-header class="card-header">
+        <mat-card-title
+          >Розподіл балів у навчальних групах за національною
+          шкалою</mat-card-title
+        >
+      </mat-card-header>
+      <mat-card-content class="line-chart">
+        <app-distribution-chart
+          [groupWithGradesData]="marksDistribution"
+        ></app-distribution-chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

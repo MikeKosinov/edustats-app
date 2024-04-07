@@ -1,0 +1,29 @@
+h2{
+  margin-left: 40px;
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+}
+.card-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card,.card-row{
+  margin: 12px;
+}
+mat-card-content.line-chart{
+  max-height: 400px;
+}
+.card-content{
+max-height: 250px;
+}
+.card-line-chart{
+  width: 100%;
+}
+.card.line-chart{
+  width: 100%;
+}
+
+

@@ -1,0 +1,26 @@
+mat-form-field {
+  margin-right: 16px;
+}
+button{
+padding: 30px;
+}
+.container {
+  flex: 1;
+  margin: 12px;
+}
+.action-buttons {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+}
+.students-container {
+  align-items: center;
+  justify-content: center;
+}
+.inline_filter_form{
+  padding-right: 24px;
+  padding-left: 24px;
+}
+#search{
+  height: 20px;
+}

@@ -1,0 +1,22 @@
+h3{
+  text-align: center;
+}
+input{
+  display: none;
+}
+.container{
+  margin: 0 auto;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.upload-container{
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+  justify-content: center;
+}
+.upload-button{
+  margin: 12px;
+}

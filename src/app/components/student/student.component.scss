@@ -1,0 +1,22 @@
+.headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+}
+.student-description {
+  color: #000;
+}
+.mat-accordion .mat-expansion-panel {
+  margin-bottom: 10px;
+}
+// .mat-expansion-panel {
+//   margin-bottom: 16px; /* Устанавливает отступ снизу каждого панели */
+//   transition: margin 0.3s ease; /* Добавляет плавное переходное анимирование для отступа */
+// }
+
+// .mat-expansion-panel.expanded {
+//   margin-bottom: 16px; /* Устанавливает отступ снизу при раскрытии панели */
+// }

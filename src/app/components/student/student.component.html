@@ -1,0 +1,19 @@
+<mat-accordion class="headers-align" multi>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ student['name'] }} {{ student['last_name'] }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <span class="student-description"
+          >{{ student.group }} навчальна група, {{getMaxSemester(student) }} семестр
+          навчання</span
+        >
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+<div>
+  <app-student-description [markDescription]="student.marks"></app-student-description>
+</div>
+  </mat-expansion-panel></mat-accordion
+>

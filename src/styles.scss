@@ -1,4 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.section-container{
+  width: 100%;
+  height: auto;
+  margin: 16px;
+}
+.chart{
+  width: 100%;
+  height: 100%;
+}
+.chart-container{
+  width: 100%;
+  height: 100%;
+}

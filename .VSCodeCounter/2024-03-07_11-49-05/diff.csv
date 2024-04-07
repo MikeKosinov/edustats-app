@@ -1,0 +1,11 @@
+"filename", "language", "TypeScript", "HTML", "comment", "blank", "total"
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/charts/bar-chart/bar-chart.component.html", "HTML", 0, 2, 0, 0, 2
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/charts/bar-chart/bar-chart.component.ts", "TypeScript", 1, 0, 4, 2, 7
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/charts/line-chart/line-chart.component.ts", "TypeScript", 16, 0, 0, -3, 13
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/fileUploader/file-uploader.component.ts", "TypeScript", -1, 0, 3, -1, 1
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/sections/departments-stats/departments-stats.component.html", "HTML", 0, 15, 0, -6, 9
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/sections/departments-stats/departments-stats.component.ts", "TypeScript", 16, 0, 0, -5, 11
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/sections/student-stats/student-stats.component.ts", "TypeScript", 2, 0, 0, -3, -1
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/components/student-description/student-description.component.html", "HTML", 0, 4, 0, 0, 4
+"/Users/mykhailokosinov/development/projects/edustat-app/src/app/services/readExcel/excel-data.service.ts", "TypeScript", 14, 0, 0, -1, 13
+"Total", "-", 48, 21, 7, -17, 59

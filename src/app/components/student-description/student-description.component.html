@@ -1,0 +1,57 @@
+
+
+
+<section class="example-section">
+  <mat-checkbox class="example-margin"
+                [(ngModel)]="filterByTypesOfControl.exams"
+                (ngModelChange)="filterChange()"
+  >Екзамени</mat-checkbox>
+  <mat-checkbox class="example-margin"
+                [(ngModel)]="filterByTypesOfControl.tests"
+                (ngModelChange)="filterChange()"
+  >Заліки</mat-checkbox>
+</section>
+<table
+  mat-table
+  [dataSource]="filteredMarksDescription"
+  class="mat-elevation-z0"
+>
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+  <!-- Position Column -->
+  <!--  -->
+  <ng-container matColumnDef="index">
+    <th mat-header-cell *matHeaderCellDef>№</th>
+    <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+  </ng-container>
+  <!-- Discipline Column -->
+  <ng-container matColumnDef="discipline">
+    <th mat-header-cell *matHeaderCellDef>Дисципліна</th>
+    <td mat-cell *matCellDef="let element">{{ element.discipline }}</td>
+  </ng-container>
+  <!--  Semester column-->
+  <ng-container matColumnDef="semester">
+    <th mat-header-cell *matHeaderCellDef>Семестр</th>
+    <td mat-cell *matCellDef="let element">{{ element.semester }}</td>
+  </ng-container>
+  <!-- Weight Column -->
+  <ng-container matColumnDef="type_of_control">
+    <th mat-header-cell *matHeaderCellDef>Тип контролю</th>
+    <td mat-cell *matCellDef="let element">{{ element.type_of_control }}</td>
+  </ng-container>
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="mark">
+    <th mat-header-cell *matHeaderCellDef>Рейтинг. бал</th>
+    <td mat-cell *matCellDef="let element">{{ element.mark }}</td>
+  </ng-container>
+  <ng-container matColumnDef="teacher">
+    <th mat-header-cell *matHeaderCellDef>Викладач</th>
+    <td mat-cell *matCellDef="let element">{{ element.teacher }}</td>
+  </ng-container>
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Дата</th>
+    <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="upload-container">
+    <h3 class="mat-h3" *ngIf="!selectedFileName">Оберіть файл для завантаження даних</h3>
+    <button
+      mat-stroked-button color="primary"
+      type="button"
+      (click)="fileInput.click()"
+      class="upload-button"
+    *ngIf="!selectedFileName"
+    >
+      <span >Обрати файл для завантаження</span>
+
+      <input
+        #fileInput
+        type="file"
+        accept=".xlsx, .xls"
+        (change)="onFileSelected($event)"
+      />
+    </button>
+    <h3 class="mat-h3" *ngIf="selectedFileName">Обрано {{selectedFileName}} для завантаження</h3>
+    <button mat-stroked-button (click)="getStoredData()"
+    class="upload-button"
+    >Завантажити дані!</button>
+    <h3 *ngIf="isFileUploaded" class="mat-h3">Файл {{selectedFileName}} завантажено</h3>
+  </div>
+</div>
+
+
+
