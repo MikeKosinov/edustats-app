@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ExcelDataService } from '../../../services/readExcel/excel-data.service';
 import { IStatisticCriteria } from '../../../interfaces/IStatisticCriteria.interface';
 import { GradeCalculation } from '../../../helpers/GradeCalculation';
-import { criteriaArray } from '../../../helpers/criterias/statisticCriterias';
 
 @Component({
   selector: 'app-departments-stats',
@@ -11,7 +10,14 @@ import { criteriaArray } from '../../../helpers/criterias/statisticCriterias';
 })
 export class DepartmentsStatsComponent implements OnInit {
   title: string = 'Загальні статистичні дані успішності студентів кафедри';
-  statisticsCriteria: IStatisticCriteria[] = criteriaArray;
+  criteriaArray = [
+    { name: 'Мода', value: 0 },
+    { name: 'Медіана', value: 0 },
+    { name: 'Середній бал', value: 0 },
+    { name: 'Стандартне відхилення', value: 0 },
+    { name: 'Дисперсія', value: 0 },
+  ];
+  statisticsCriteria: IStatisticCriteria[] = this.criteriaArray;
   modeCriteria = this.statisticsCriteria.find(
     (criteria) => criteria.name === 'Мода'
   );

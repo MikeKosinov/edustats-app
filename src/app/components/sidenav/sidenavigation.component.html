@@ -18,13 +18,15 @@
   </mat-drawer>
   <!-- contents of main section -->
   <div class="sidenav-content">
-    <router-outlet></router-outlet>
-<!--      <h1 *ngIf="!isFileUploaded && !isUploadDataComponent()" class="mat-h1">{{uploadMessage}}</h1>-->
-<!--    <div *ngIf="isFileUploaded || isUploadDataComponent()">-->
-<!--      <section class="main-content">-->
-<!--        &lt;!&ndash; provides router into the app &ndash;&gt;-->
-<!--        <router-outlet></router-outlet>-->
-<!--      </section>-->
-<!--    </div>-->
+    <h1 *ngIf="!isFileUploaded && !isUploadDataComponent()" class="mat-h1">
+      {{ uploadMessage }}
+    </h1>
+    <div *ngIf="isFileUploaded || isUploadDataComponent()">
+      <section class="main-content">
+        <router-outlet></router-outlet>
+        <!--        &lt;!&ndash; provides router into the app &ndash;&gt;-->
+        <!--        <router-outlet></router-outlet>-->
+      </section>
+    </div>
   </div>
 </mat-drawer-container>
